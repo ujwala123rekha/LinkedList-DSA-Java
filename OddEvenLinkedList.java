@@ -4,8 +4,8 @@ static Node oddEvenList(Node head) {
     Node even = head.next;
     Node evenHead = even; 
     while (even != null && even.next != null) {
-        odd.next = even.next;  
-        odd = odd.next;        
+        odd.next = odd.next.next;  
+        even.next = even.next.next;        
         
         odd = odd.next;  
         even = even.next;      
